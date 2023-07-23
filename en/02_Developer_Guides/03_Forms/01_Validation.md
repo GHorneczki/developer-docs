@@ -97,7 +97,7 @@ above example with the `Email` validation. The `validate` method on `FormField` 
 public function validate($validator)
 {
     if ((int) $this->Value() === 10) {
-        $validator->validationError($this->Name(), 'This value cannot be 10');
+        $validator->validationError($this->getName(), 'This value cannot be 10');
         return $this->extendValidationResult(false, $validator);
     }
 
